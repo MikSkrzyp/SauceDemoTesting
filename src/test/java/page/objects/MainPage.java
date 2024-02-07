@@ -13,10 +13,8 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"header_container\"]/div[1]")
     private WebElement primary_header;
 
-    @FindBy(id = "item_4_title_link")
-    private WebElement backpack_link;
 
-    @FindBy(id = "add-to-cart-sauce-labs-backpack")
+    @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-backpack\"]")
     private WebElement backpack_add_to_cart_button;
 
     @FindBy(className = "shopping_cart_link")
@@ -30,10 +28,9 @@ public class MainPage extends BasePage{
         assertEquals(DriverManager.getWebDriver().getCurrentUrl(),"https://www.saucedemo.com/inventory.html");
         return this;
     }
-    @Step("Click on item and add it to card(Sauce Labs Backpack)")
-    public MainPage Click_on_an_item_and_add_to_card_an_item_Sauce_Labs_Backpack(){
-        log().info("Click on item and add it to card(Sauce Labs Backpack)");
-        backpack_link.click();
+    @Step("Add an item to card(Sauce Labs Backpack)")
+    public MainPage Add_to_card_an_item_Sauce_Labs_Backpack(){
+        log().info("Add an item to card(Sauce Labs Backpack)");
         backpack_add_to_cart_button.click();
         return this;
     }
