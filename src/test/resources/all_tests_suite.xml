@@ -8,9 +8,15 @@
     </listeners>
 
     <test name="TestCase1">
-        <parameter name="browser" value="FIREFOX"/>
+        <parameter name="browser" value="CHROME"/>
         <classes>
             <class name="tests.TestCase1"/>
+        </classes>
+    </test>
+    <test name="TestCase2">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.TestCase2"/>
         </classes>
     </test>
 
