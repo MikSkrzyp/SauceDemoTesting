@@ -26,12 +26,10 @@ Description: testing buying an item (Sauce Labs Backpack)
 
 TEST 3
 
-Description:
+Description: testing if price filter is working correctly (from low to high)
 
-1.
-2.
-3.
-4.
-5.
-6.
-(more points)
+1. Log in with given username and password: standard_user, secret_sauce
+2. Check if you are headed to home page
+3. Click on filter and pick sorting from low to high
+4. Ensure that products are sorted correctly in ascending order
+

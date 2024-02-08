@@ -2,9 +2,15 @@ package page.objects;
 
 import driver.manager.DriverManager;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import waits.WaitForElement;
+import static page.objects.HelperMethods.isSortedAsc;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
@@ -19,6 +25,9 @@ public class MainPage extends BasePage{
 
     @FindBy(className = "shopping_cart_link")
     private WebElement cart_link;
+
+    @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/div/span/select")
+    private WebElement filter;
 
     @Step("Check if you are headed to home page")
     public MainPage Check_if_you_are_headed_to_home_page(){
@@ -39,5 +48,31 @@ public class MainPage extends BasePage{
     public CartPage Click_cart_icon(){
             cart_link.click();
         return new CartPage();
+    }
+
+    @Step("Click on filter and pick sorting from low to high")
+    public MainPage Click_on_filter_and_pick_sorting_from_low_to_high(){
+        log().info("Click on filter and pick sorting from low to high");
+        Select select_filter = new Select(filter);
+          select_filter.selectByValue("lohi");
+
+        return this;
+    }
+
+    @Step("Ensure that products are sorted correctly in ascending order")
+    public MainPage Ensure_that_products_are_sorted_correctly_in_ascending_order(){
+        log().info("Ensure that products are sorted correctly in ascending order");
+        ArrayList<String> list_of_prices = new ArrayList<>();
+
+        for (int i = 1; i <= 6; i++) {
+            String xpath = "//*[@id='inventory_container']/div/div[" + i + "]/div[2]/div[2]/div";
+            WebElement element = DriverManager.getWebDriver().findElement(By.xpath(xpath));
+            String textValue = element.getText();
+            list_of_prices.add(textValue);
+        }
+        assertTrue(isSortedAsc(list_of_prices));
+
+
+        return this;
     }
 }
