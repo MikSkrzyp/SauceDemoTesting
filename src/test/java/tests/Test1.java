@@ -7,12 +7,12 @@ import navigation.ApplicationURLs;
 import org.testng.annotations.Test;
 import page.objects.LoginPage;
 
-public class TestCase1 extends TestBase{
+public class Test1 extends TestBase{
 
     @Test
     @TmsLink("ID-1")
     @Description("testing logging in functionality")
-    public void TestCase1_method(){
+    public void Test1_method(){
         DriverUtils.navigateToPage(ApplicationURLs.APPLICATION_URL);
         LoginPage loginPage = new LoginPage();
         loginPage

@@ -3,17 +3,16 @@ package tests;
 import io.qameta.allure.Description;
 import io.qameta.allure.TmsLink;
 import org.testng.annotations.Test;
-import org.testng.reporters.jq.Main;
 import page.objects.LoginPage;
 
-public class TestCase2 extends TestBase{
+public class Test2 extends TestBase{
 
 
 
     @Test
     @TmsLink("ID-2")
     @Description("testing buying an item (Sauce Labs Backpack)")
-    public void TestCase2_method(){
+    public void Test2_method(){
         LoginPage loginPage = new LoginPage();
         loginPage
                 .Log_in_with_given_username_and_password__standard_user_secret_sauce()

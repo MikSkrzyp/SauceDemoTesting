@@ -1,4 +1,4 @@
-TEST CASE 1
+TEST 1
 
 Description: testing logging in functionality
 
@@ -9,7 +9,7 @@ Description: testing logging in functionality
 5. Check if you are headed to home page
 
 
-TEST CASE 2
+TEST 2
 
 Description: testing buying an item (Sauce Labs Backpack)
 
@@ -24,7 +24,7 @@ Description: testing buying an item (Sauce Labs Backpack)
 9. Click back to home button
 10. Ensure that you are headed back to MainPage
 
-TEST CASE 3
+TEST 3
 
 Description:
 

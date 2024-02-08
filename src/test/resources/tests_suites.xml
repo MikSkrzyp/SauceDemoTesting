@@ -7,16 +7,16 @@
         <listener class-name="utils.listeners.AnnotationTransformer"/>
     </listeners>
 
-    <test name="TestCase1">
+    <test name="Test1">
         <parameter name="browser" value="CHROME"/>
         <classes>
-            <class name="tests.TestCase1"/>
+            <class name="tests.Test1"/>
         </classes>
     </test>
-    <test name="TestCase2">
-        <parameter name="browser" value="CHROME"/>
+    <test name="Test2">
+        <parameter name="browser" value="FIREFOX"/>
         <classes>
-            <class name="tests.TestCase2"/>
+            <class name="tests.Test2"/>
         </classes>
     </test>
 
