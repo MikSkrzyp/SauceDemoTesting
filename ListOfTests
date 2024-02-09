@@ -33,3 +33,15 @@ Description: testing if price filter is working correctly (from low to high)
 3. Click on filter and pick sorting from low to high
 4. Ensure that products are sorted correctly in ascending order
 
+TEST 4
+
+Description: testing if price of products in checkout overview are summing up correctly (Backpack, Bike Light)
+
+1. Log in with given username and password: standard_user, secret_sauce
+2. Check if you are headed to home page
+3. Add an items to cart(Sauce Labs Backpack and Sauce Bike Light)
+4. Click cart icon
+5. Click checkout button
+6. Provide firstName, lastName and zipcode (xyz,xyz,999-999)
+7. Click continue button
+8. Check if field "item total" is equal to sum of these two items in cart

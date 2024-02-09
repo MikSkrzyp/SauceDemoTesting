@@ -29,6 +29,9 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"header_container\"]/div[2]/div/span/select")
     private WebElement filter;
 
+    @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")
+    private WebElement bike_light_add_to_cart_button;
+
     @Step("Check if you are headed to home page")
     public MainPage Check_if_you_are_headed_to_home_page(){
         log().info("Check if you are headed to home page");
@@ -75,4 +78,13 @@ public class MainPage extends BasePage{
 
         return this;
     }
+
+    @Step("Add an items to cart(Sauce Labs Backpack and Sauce Bike Light)")
+    public MainPage Add_an_items_to_cart_Sauce_Labs_Backpack_and_Sauce_Bike_Light(){
+        log().info("Add an items to cart(Sauce Labs Backpack and Sauce Bike Light)");
+        backpack_add_to_cart_button.click();
+        bike_light_add_to_cart_button.click();
+        return new MainPage();
+    }
+
 }

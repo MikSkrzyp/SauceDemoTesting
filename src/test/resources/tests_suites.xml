@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="SauceDemoTesting tests" parallel="tests" thread-count="3">
+<suite name="SauceDemoTesting tests" parallel="tests" thread-count="4">
 
     <listeners>
         <listener class-name="utils.listeners.TestListener"/>
@@ -14,15 +14,21 @@
         </classes>
     </test>
     <test name="Test2">
-        <parameter name="browser" value="FIREFOX"/>
+        <parameter name="browser" value="CHROME"/>
         <classes>
             <class name="tests.Test2"/>
         </classes>
     </test>
     <test name="Test3">
-        <parameter name="browser" value="FIREFOX"/>
+        <parameter name="browser" value="CHROME"/>
         <classes>
             <class name="tests.Test3"/>
+        </classes>
+    </test>
+    <test name="Test4">
+        <parameter name="browser" value="FIREFOX"/>
+        <classes>
+            <class name="tests.Test4"/>
         </classes>
     </test>
 

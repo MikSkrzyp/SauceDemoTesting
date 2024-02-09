@@ -1,4 +1,6 @@
 package page.objects;
+import org.openqa.selenium.WebElement;
+
 import java.util.ArrayList;
 
 public class HelperMethods {
@@ -20,6 +22,18 @@ public class HelperMethods {
         }
 
         return true;
+    }
+    public static double parseWebElementValueToDouble(WebElement element) {
+        String text = element.getText();
+        text = text.replace("$","");
+        double value;
+        try {
+            value = Double.parseDouble(text);
+        } catch (NumberFormatException e) {
+            System.err.println("Failed to parse value: " + text);
+            value = Double.NaN;
+        }
+        return value;
     }
 
 
