@@ -13,7 +13,7 @@ public class Test1 extends TestBase{
     @TmsLink("ID-1")
     @Description("testing logging in functionality")
     public void Test1_method(){
-        DriverUtils.navigateToPage(ApplicationURLs.APPLICATION_URL);
+
         LoginPage loginPage = new LoginPage();
         loginPage
                 .Check_if_the_tag_with_text_Swag_Labs_is_visible()

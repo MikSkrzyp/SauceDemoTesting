@@ -3,7 +3,9 @@ package page.objects;
 import driver.manager.DriverManager;
 import driver.manager.DriverUtils;
 import io.qameta.allure.Step;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -37,6 +39,12 @@ public class MainPage extends BasePage{
 
     @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")
     private WebElement bike_light_add_to_cart_button;
+
+    @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-bolt-t-shirt\"]")
+    private WebElement tshirt_add_to_car_button;
+
+    @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-fleece-jacket\"]")
+    private WebElement fleece_jacket_add_to_cart_button;
 
     @Step("Check if you are headed to home page")
     public MainPage Check_if_you_are_headed_to_home_page(){
@@ -82,12 +90,22 @@ public class MainPage extends BasePage{
         log().info("Ensure that products are sorted correctly in ascending order");
         ArrayList<String> list_of_prices = new ArrayList<>();
 
-        for (int i = 1; i <= 6; i++) {
+        int i = 1;
+        boolean allElementsAdded = false;
+
+        while (!allElementsAdded) {
             String xpath = "//*[@id='inventory_container']/div/div[" + i + "]/div[2]/div[2]/div";
-            WebElement element = DriverManager.getWebDriver().findElement(By.xpath(xpath));
-            String textValue = element.getText();
-            list_of_prices.add(textValue);
+            try {
+                WebElement element = DriverManager.getWebDriver().findElement(By.xpath(xpath));
+                String textValue = element.getText();
+                list_of_prices.add(textValue);
+                i++;
+
+            } catch (NoSuchElementException e) {
+                allElementsAdded = true;
+            }
         }
+
         assertTrue(isSortedAsc(list_of_prices));
 
 
@@ -100,6 +118,14 @@ public class MainPage extends BasePage{
         backpack_add_to_cart_button.click();
         bike_light_add_to_cart_button.click();
         return new MainPage();
+    }
+
+    @Step("Add items to cart(T-shirt and Fleece Jacket)")
+    public MainPage  Add_items_to_cart_T_shirt_and_Fleece_Jacket(){
+        log().info("Add items to cart(T-shirt and Fleece Jacket)");
+        tshirt_add_to_car_button.click();
+        fleece_jacket_add_to_cart_button.click();
+        return this;
     }
 
 }
