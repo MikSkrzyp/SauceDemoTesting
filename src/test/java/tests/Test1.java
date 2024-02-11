@@ -20,7 +20,8 @@ public class Test1 extends TestBase{
                 .Check_if_the_input_fields_for_username_and_password_are_visible()
                 .Try_to_log_in_with_wrong_username_or_password_clickLogin_and_check_if_the_error_is_working()
                 .Log_in_with_given_username_and_password__standard_user_secret_sauce()
-                .Check_if_you_are_headed_to_home_page();
+                .Check_if_you_are_headed_to_home_page()
+                .Logout();
 
     }
 }

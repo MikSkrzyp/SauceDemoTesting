@@ -1,6 +1,7 @@
 package page.objects;
 
 import driver.manager.DriverManager;
+import driver.manager.DriverUtils;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,11 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"header_container\"]/div[1]")
     private WebElement primary_header;
 
+    @FindBy(xpath = "//*[@id=\"logout_sidebar_link\"]")
+    private WebElement logout_button;
+
+    @FindBy(xpath = "//*[@id=\"react-burger-menu-btn\"]")
+    private WebElement left_list_button;
 
     @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-backpack\"]")
     private WebElement backpack_add_to_cart_button;
@@ -37,8 +43,17 @@ public class MainPage extends BasePage{
         log().info("Check if you are headed to home page");
         WaitForElement.waitUntilElementIsVisible(primary_header);
         assertTrue(primary_header.isDisplayed());
-        assertEquals(DriverManager.getWebDriver().getCurrentUrl(),"https://www.saucedemo.com/inventory.html");
+        assertEquals(DriverUtils.getCurrentURL(),"https://www.saucedemo.com/inventory.html");
         return this;
+    }
+
+    @Step("Logout")
+    public LoginPage Logout(){
+        log().info("Logout");
+        left_list_button.click();
+        WaitForElement.waitUntilElementIsClickable(logout_button);
+        logout_button.click();
+        return new LoginPage();
     }
     @Step("Add an item to card(Sauce Labs Backpack)")
     public MainPage Add_to_card_an_item_Sauce_Labs_Backpack(){

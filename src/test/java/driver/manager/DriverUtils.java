@@ -16,4 +16,9 @@ public class DriverUtils {
         DriverManager.getWebDriver().navigate().to(pageUrl);
     }
 
+    @Step("Getting current url")
+    public static String getCurrentURL(){
+      return   DriverManager.getWebDriver().getCurrentUrl();
+    }
+
 }

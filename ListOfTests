@@ -7,6 +7,7 @@ Description: testing logging in functionality
 3. Try to log in with wrong username or password,click login and check if the error alert is working correctly
 4. Log in with given username and password: standard_user, secret_sauce
 5. Check if you are headed to home page
+6. Logout
 
 
 TEST 2
