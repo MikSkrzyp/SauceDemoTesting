@@ -30,7 +30,7 @@ Java implementation of these tests can be found in
 
 ## POM
 
-Project uses POM's (Page object model) and these can be found in:
+Project uses POP (Page Object Pattern) and these objects can be found in:
            
     src/tests/java/page/objects
 

@@ -1,5 +1,6 @@
 package tests;
 
+import driver.manager.DriverManager;
 import driver.manager.DriverUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.TmsLink;

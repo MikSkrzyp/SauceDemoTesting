@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class PropertiesLoader {
 
-    //Class loads properties
+    //Class includes method which reads properties from given properties file
 
     private Logger logger = LogManager.getLogger(PropertiesLoader.class);
 

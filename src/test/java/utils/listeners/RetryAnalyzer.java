@@ -7,14 +7,16 @@ import org.testng.ITestResult;
 
 public class RetryAnalyzer implements IRetryAnalyzer {
 
+    //Class allows to retry test if it failed
+
     private int count = 0;
-    private static final int MAX_NUMBER_OF_RETRIES = 2;
+    private static final int RETRIES= 2;
     private Logger logger = LogManager.getLogger(RetryAnalyzer.class);
 
     @Override
     public boolean retry(ITestResult iTestResult) {
         if (!iTestResult.isSuccess()) {
-            if (count < MAX_NUMBER_OF_RETRIES) {
+            if (count < RETRIES) {
                 count++;
                 logger.info("Retrying test method {}!", iTestResult.getName());
                 return true;

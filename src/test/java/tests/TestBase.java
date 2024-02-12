@@ -14,6 +14,8 @@ import static navigation.ApplicationURLs.APPLICATION_URL;
 
 public class TestBase {
 
+    //Class is created to avoid code duplication. It includes basic actions for tests
+
     @Step("Loading configuration from configuration.properties")
     @BeforeClass
     public void beforeClass() {

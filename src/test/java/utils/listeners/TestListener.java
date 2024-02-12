@@ -9,6 +9,9 @@ import utils.ScreenShotMaker;
 
 public class TestListener implements ITestListener {
 
+    //Class includes logs for status of test
+
+
     private Logger logger = LogManager.getLogger(TestListener.class);
 
     @Override

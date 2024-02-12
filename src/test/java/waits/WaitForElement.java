@@ -9,6 +9,9 @@ import java.time.Duration;
 
 public class WaitForElement {
 
+    //Class includes 2 methods which allow for Explicit Wait for elements
+
+
     private static WebDriverWait getWebDriverWait() {
         return new WebDriverWait(DriverManager.getWebDriver(), Duration.ofSeconds(30));
     }

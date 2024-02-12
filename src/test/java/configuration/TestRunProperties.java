@@ -3,6 +3,11 @@ package configuration;
 import driver.BrowserType;
 
 public class TestRunProperties {
+
+    //Class has 3 methods which returns from configuration.properties information:
+    // about GridUrl, if we want to run tests remotely and which browser we want to use
+
+
     public static String getGridUrl() {
         return ConfigurationProperties.getProperties().getProperty("grid.url");
     }

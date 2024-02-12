@@ -17,10 +17,13 @@ import java.net.URL;
 
 public class BrowserFactory {
 
+    //Class includes implementation of choice of browser
+
     private static final String MESSAGE_UNKNOWN_BROWSER = "Unknown browser type! Please check your configuration";
 
     private BrowserType browserType;
 
+    //in this class there are methods that can make running tests with SeleniumGrid possible
     private boolean isRemoteRun;
 
     public BrowserFactory(BrowserType browserType, boolean isRemoteRun) {
@@ -28,8 +31,11 @@ public class BrowserFactory {
         this.isRemoteRun = isRemoteRun;
     }
 
+    //this methods return webdriver object with type of browser
     public WebDriver getBrowser() {
 
+        //in this if we check if we want to run it with SeleniumGrid or locally
+        //to run it on Grid it uses DesiredCapabilities which is needed to make it works
         if (isRemoteRun) {
 
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -67,6 +73,7 @@ public class BrowserFactory {
         }
     }
 
+    //method returns RemoteWebdriver
     private WebDriver getRemoteWebDriver(DesiredCapabilities desiredCapabilities) {
         RemoteWebDriver remoteWebDriver = null;
 
