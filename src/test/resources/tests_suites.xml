@@ -14,7 +14,7 @@
         </classes>
     </test>
     <test name="Test2">
-        <parameter name="browser" value="CHROME"/>
+        <parameter name="browser" value="FIREFOX"/>
         <classes>
             <class name="tests.Test2"/>
         </classes>

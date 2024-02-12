@@ -5,6 +5,17 @@ These project is about testing website
 
 I have written 5 tests which concern functionality aspects of this website
 
+## Tech Stack
+
+*Programming language:* Java
+
+*Build Automation Tool:* Maven
+
+*Frameworks for tests:* Selenium, TestNG
+
+*Framework for reports:* Allure
+
+
 ## To run tests:
 
 with maven command
@@ -28,7 +39,7 @@ Java implementation of these tests can be found in
 
 
 
-## POM
+## POP
 
 Project uses POP (Page Object Pattern) and these objects can be found in:
            
@@ -36,17 +47,15 @@ Project uses POP (Page Object Pattern) and these objects can be found in:
 
 
 
-## Tech Stack
-
-*Programming language:* Java
-
-*Architecture:* Maven
-
-*Frameworks for tests:* Selenium, TestNG
-
-*Framework for reports:* Allure
 
 
 ## Allure Report
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+to generate report
+````
+mvn allure:install
+````
+````            
+mvn allure:report
+````
+![App Screenshot](allure_report.png)
