@@ -58,4 +58,9 @@ mvn allure:install
 ````            
 mvn allure:report
 ````
+
+Generated report can be found in your:
+````
+target/site/index.html
+````
 ![App Screenshot](allure_report.png)
