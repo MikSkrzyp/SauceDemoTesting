@@ -45,10 +45,12 @@ public class CartPage extends BasePage {
 
     @Step("Ensure that nothing is in the cart")
     public CartPage Ensure_that_nothing_is_in_the_cart() {
+        //finding all buttons with remove text
         List<WebElement> removeButtons = DriverManager.getWebDriver().findElements(By.xpath("//button[contains(text(), 'Remove')]"));
         log().info("Ensure that nothing is in the cart");
 
         boolean anyRemoveButtonDisplayed = false;
+        //loop which checks if any button is displayed
         for (WebElement removeButton : removeButtons) {
             if (removeButton.isDisplayed()) {
                 anyRemoveButtonDisplayed = true;

@@ -36,12 +36,17 @@ public class Checkout_OverviewPage extends BasePage{
 @Step("Check if field \"item total\" is equal to sum of these two items in cart")
 public Checkout_OverviewPage Check_if_field_item_total_is_equal_to_sum_of_these_two_items_in_cart(){
     log().info("Check if field \"item total\" is equal to sum of these two items in cart");
+
+        //finding all prices
         List<WebElement> elements = DriverManager.getWebDriver().findElements(By.className("inventory_item_price"));
         double sum = 0;
+        //summing all prices
         for(WebElement x : elements){
            sum +=parseWebElementValueToDouble(x);
         }
+
         String total_sumString = total_sum_field.getText();
+        //deleting not needed part of string and then parsing it into double
          total_sumString= total_sumString.replace("Item total: $","");
        double total_sum_field_number = Double.parseDouble(total_sumString);
 

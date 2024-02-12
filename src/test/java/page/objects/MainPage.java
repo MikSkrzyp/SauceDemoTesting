@@ -92,7 +92,7 @@ public class MainPage extends BasePage{
 
         int i = 1;
         boolean allElementsAdded = false;
-
+        //this while loop find all prices on page and add them to the list
         while (!allElementsAdded) {
             String xpath = "//*[@id='inventory_container']/div/div[" + i + "]/div[2]/div[2]/div";
             try {
