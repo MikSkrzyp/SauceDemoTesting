@@ -6,6 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 
 public class DriverUtils {
 
+    //Class includes 3 methods which we are using to make basic actions with driver easier
+
     @Step("Maximizing browser window")
     public static void setInitialConfiguration(){
         DriverManager.getWebDriver().manage().window().maximize();

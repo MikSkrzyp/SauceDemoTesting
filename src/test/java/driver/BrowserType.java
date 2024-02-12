@@ -1,6 +1,8 @@
 package driver;
 
 public enum BrowserType {
+
+    //Enum with names of browsers implemented in this project
     FIREFOX("firefox"),
     CHROME("chrome");
 

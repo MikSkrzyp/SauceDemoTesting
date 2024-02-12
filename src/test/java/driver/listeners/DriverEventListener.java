@@ -12,6 +12,8 @@ import java.util.List;
 
 public class DriverEventListener implements WebDriverListener {
 
+    //Class provide logs for basic WebElements actions
+
     private static Logger logger = LogManager.getLogger(DriverEventListener.class);
 
     @Override

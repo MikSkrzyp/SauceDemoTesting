@@ -4,6 +4,7 @@ import java.util.Properties;
 
 public class ConfigurationProperties {
 
+//Class stores all loaded properties
 
     private static Properties properties;
 

@@ -10,19 +10,24 @@ import java.util.Properties;
 
 public class PropertiesLoader {
 
+    //Class loads properties
+
     private Logger logger = LogManager.getLogger(PropertiesLoader.class);
 
     public Properties getPropertiesFromFile(String propertiesFileName) {
 
+        //inputstream helps us to read properties
         InputStream inputStream = null;
 
         Properties properties = new Properties();
         try {
             logger.info("Trying to load properties with file name: " + propertiesFileName);
 
+            //here we are reading properties
             inputStream = getClass().getClassLoader().getResourceAsStream(propertiesFileName);
 
             if (inputStream != null) {
+                //loading properties to Properties object
                 properties.load(inputStream);
                 logger.info("Successfully loaded properties for file: " + propertiesFileName);
             } else {
@@ -33,6 +38,7 @@ public class PropertiesLoader {
             e.printStackTrace();
             throw new RuntimeException("Cannot load properties due to IOException!");
         } finally {
+            //we are closing inputStream
             closeResource(inputStream);
         }
 
