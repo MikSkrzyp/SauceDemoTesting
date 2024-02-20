@@ -64,3 +64,9 @@ Generated report can be found in your:
 target/site/index.html
 ````
 ![App Screenshot](allure_report.png)
+
+
+## Jenkins Pipeline
+tests had been run on jenkins pipeline
+
+![App Screenshot](jenkins_pipeline_screen.png)
