@@ -67,6 +67,6 @@ target/site/index.html
 
 
 ## Jenkins Pipeline
-tests had been run on jenkins pipeline
+tests were run on jenkins pipeline
 
 ![App Screenshot](jenkins_pipeline_screen.png)
