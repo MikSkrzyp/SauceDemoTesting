@@ -73,4 +73,5 @@ Test cases were run on jenkins pipeline
 
 ## Selenium Grid
 Test cases were run using Selenium Grid
+
 ![App Screenshot](grid.png)
