@@ -18,11 +18,11 @@ I have written 5 example test cases to show my skills of GUI testing. Each test 
 
 ## To run test cases:
 
-with maven command
+with maven command:
             
     mvn clean test
 
-with running xml file :
+with running xml file:
 
     src/test/resources/test_suites.xml
 
@@ -31,7 +31,7 @@ Test cases description and steps can be found in a file:
 
     ListOfTestCases
 
-Java implementation of these test cases can be found in
+Java implementation of these test cases can be found in:
 
     src/test/java/tests
 
@@ -51,7 +51,7 @@ Project uses POP (Page Object Pattern) and these objects can be found in:
 
 ## Allure Report
 
-to generate report
+to generate report:
 ````
 mvn allure:install
 ````
@@ -59,7 +59,7 @@ mvn allure:install
 mvn allure:report
 ````
 
-Generated report can be found in your:
+Generated report can be found in Your:
 ````
 target/site/index.html
 ````
@@ -70,3 +70,7 @@ target/site/index.html
 Test cases were run on jenkins pipeline
 
 ![App Screenshot](jenkins_pipeline_screen.png)
+
+## Selenium Grid
+Test cases were run using Selenium Grid
+![App Screenshot](grid.png)
