@@ -5,11 +5,11 @@ import io.qameta.allure.TmsLink;
 import org.testng.annotations.Test;
 import page.objects.LoginPage;
 
-public class Test5 extends TestBase{
+public class TestCase5 extends TestBase{
 
     @Test
     @TmsLink("ID-5")
-    @Description("testing if removing from cart is working correctly")
+    @Description("testing if removing items from cart is working correctly (T-shirt and Fleece Jacket)")
     public void Test5_method(){
         LoginPage loginPage = new LoginPage();
         loginPage

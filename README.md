@@ -1,9 +1,9 @@
 # SauceDemoTesting
 
-These project is about testing website
+These project is about testing GUI of website
 [saucedemo.com](https://www.saucedemo.com/)
 
-I have written 5 tests which concern functionality aspects of this website
+I have written 5 example test cases to show my skills of GUI testing. Each test case has steps to perform. My job was to automate these using tech stack given below
 
 ## Tech Stack
 
@@ -16,7 +16,7 @@ I have written 5 tests which concern functionality aspects of this website
 *Framework for reports:* Allure
 
 
-## To run tests:
+## To run test cases:
 
 with maven command
             
@@ -26,12 +26,12 @@ with running xml file :
 
     src/test/resources/test_suites.xml
 
-## Tests
-Tests description and steps can be found in a file:
+## Test Cases
+Test cases description and steps can be found in a file:
 
-    ListOfTests
+    ListOfTestCases
 
-Java implementation of these tests can be found in
+Java implementation of these test cases can be found in
 
     src/test/java/tests
 
@@ -67,6 +67,6 @@ target/site/index.html
 
 
 ## Jenkins Pipeline
-tests were run on jenkins pipeline
+Test cases were run on jenkins pipeline
 
 ![App Screenshot](jenkins_pipeline_screen.png)

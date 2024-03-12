@@ -5,7 +5,7 @@ import io.qameta.allure.TmsLink;
 import org.testng.annotations.Test;
 import page.objects.LoginPage;
 
-public class Test2 extends TestBase{
+public class TestCase2 extends TestBase{
 
 
 

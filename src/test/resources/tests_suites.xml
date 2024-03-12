@@ -7,34 +7,34 @@
         <listener class-name="utils.listeners.AnnotationTransformer"/>
     </listeners>
 
-    <test name="Test1">
+    <test name="TestCase1">
         <parameter name="browser" value="CHROME"/>
         <classes>
-            <class name="tests.Test1"/>
+            <class name="tests.TestCase1"/>
         </classes>
     </test>
-    <test name="Test2">
+    <test name="TestCase2">
         <parameter name="browser" value="FIREFOX"/>
         <classes>
-            <class name="tests.Test2"/>
+            <class name="tests.TestCase2"/>
         </classes>
     </test>
-    <test name="Test3">
+    <test name="TestCase3">
         <parameter name="browser" value="CHROME"/>
         <classes>
-            <class name="tests.Test3"/>
+            <class name="tests.TestCase3"/>
         </classes>
     </test>
-    <test name="Test4">
+    <test name="TestCase4">
         <parameter name="browser" value="CHROME"/>
         <classes>
-            <class name="tests.Test4"/>
+            <class name="tests.TestCase4"/>
         </classes>
     </test>
-    <test name="Test5">
+    <test name="TestCase5">
         <parameter name="browser" value="FIREFOX"/>
         <classes>
-            <class name="tests.Test5"/>
+            <class name="tests.TestCase5"/>
         </classes>
     </test>
 

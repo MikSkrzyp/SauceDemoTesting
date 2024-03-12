@@ -1,18 +1,15 @@
 package tests;
 
-import driver.manager.DriverManager;
-import driver.manager.DriverUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.TmsLink;
-import navigation.ApplicationURLs;
 import org.testng.annotations.Test;
 import page.objects.LoginPage;
 
-public class Test1 extends TestBase{
+public class TestCase1 extends TestBase{
 
     @Test
     @TmsLink("ID-1")
-    @Description("testing logging in functionality")
+    @Description("testing logging in functionality first with wrong username or password then with correct username and password")
     public void Test1_method(){
 
         LoginPage loginPage = new LoginPage();

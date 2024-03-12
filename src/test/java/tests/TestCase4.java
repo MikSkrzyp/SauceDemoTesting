@@ -5,7 +5,7 @@ import io.qameta.allure.TmsLink;
 import org.testng.annotations.Test;
 import page.objects.LoginPage;
 
-public class Test4 extends TestBase{
+public class TestCase4 extends TestBase{
     @Test
     @TmsLink("ID-4")
     @Description("testing if price of products in checkout overview are summing up correctly (Backpack, Bike Light)")

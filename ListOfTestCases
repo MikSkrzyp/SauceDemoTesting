@@ -1,6 +1,6 @@
-TEST 1
+TEST CASE 1
 
-Description: testing logging in functionality
+Description: testing logging in functionality first with wrong username or password then with correct username and password
 
 1. Check if the tag with text "Swag Labs" is visible
 2. Check if the input fields for username and password are visible
@@ -10,7 +10,7 @@ Description: testing logging in functionality
 6. Logout
 
 
-TEST 2
+TEST CASE 2
 
 Description: testing buying an item (Sauce Labs Backpack)
 
@@ -25,7 +25,7 @@ Description: testing buying an item (Sauce Labs Backpack)
 9. Click back to home button
 10. Ensure that you are headed back to MainPage
 
-TEST 3
+TEST CASE 3
 
 Description: testing if price filter is working correctly (from low to high)
 
@@ -34,7 +34,7 @@ Description: testing if price filter is working correctly (from low to high)
 3. Click on filter and pick sorting from low to high
 4. Ensure that products are sorted correctly in ascending order
 
-TEST 4
+TEST CASE 4
 
 Description: testing if price of products in checkout overview are summing up correctly (Backpack, Bike Light)
 
@@ -47,8 +47,8 @@ Description: testing if price of products in checkout overview are summing up co
 7. Click continue button
 8. Check if field "item total" is equal to sum of these two items in cart
 
-Test 5
-Description: testing if removing from cart is working correctly
+TEST CASE 5
+Description: testing if removing items from cart is working correctly (T-shirt and Fleece Jacket)
 
 1. Log in with given username and password: standard_user, secret_sauce
 2. Check if you are headed to home page
