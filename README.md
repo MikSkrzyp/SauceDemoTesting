@@ -15,7 +15,7 @@ I have written 5 example test cases to show my skills of GUI testing. Each test 
 
 *Framework for reports:* Allure
 
-*Other* Jenkins, Selenium Grid
+*Other:* Jenkins, Selenium Grid
 
 
 ## To run test cases:
