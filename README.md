@@ -3,7 +3,7 @@
 This project is about testing GUI of website
 [saucedemo.com](https://www.saucedemo.com/)
 
-I have written 5 example test cases to show my skills of GUI testing. Each test case has steps to perform. My job was to automate those using tech stack given below
+I have written 6 example test cases to show my skills of GUI testing. Each test case has steps to perform. My job was to automate those using tech stack given below
 
 ## Tech Stack
 
