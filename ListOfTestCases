@@ -4,7 +4,7 @@ Description: testing logging in functionality first with wrong username or passw
 
 1. Check if the tag with text "Swag Labs" is visible
 2. Check if the input fields for username and password are visible
-3. Try to log in with wrong username or password,click login and check if the error alert is working correctly
+3. Try to log in with wrong username, click login and check if the error alert is working correctly
 4. Log in with given username and password: standard_user, secret_sauce
 5. Check if you are headed to home page
 6. Logout

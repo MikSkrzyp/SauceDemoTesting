@@ -48,8 +48,8 @@ public class LoginPage extends BasePage{
         assertTrue(password_input.isDisplayed());
         return this;
     }
-    @Step("Try to log in with wrong username or password,click login and check if the error alert is working correctly")
-    public LoginPage Try_to_log_in_with_wrong_username_or_password_clickLogin_and_check_if_the_error_is_working(){
+    @Step("Try to log in with wrong username,click login and check if the error alert is working correctly")
+    public LoginPage Try_to_log_in_with_wrong_username_clickLogin_and_check_if_the_error_is_working(){
         log().info("Try to log in with wrong username or password, click login and check if the error alert is working correctly");
         username_input.sendKeys("xyz");
         password_input.sendKeys("secret_sauce");
