@@ -1,6 +1,6 @@
 TEST CASE 1
 
-Description: testing logging in functionality first with wrong username or password then with correct username and password
+Description: testing logging in functionality first with wrong username, then with correct username and password
 
 1. Check if the tag with text "Swag Labs" is visible
 2. Check if the input fields for username and password are visible
@@ -56,3 +56,12 @@ Description: testing if removing items from cart is working correctly (T-shirt a
 4. Click cart icon
 5. Remove these two items from cart (t-shirt and jacket)
 6. Ensure that nothing is in the cart
+
+TEST CASE 6
+
+Description: testing if locked out user can log in
+
+1. Check if the tag with text "Swag Labs" is visible
+2. Check if the input fields for username and password are visible
+3. Try to log in with username "locked_out_user" and with password "secret_sauce"
+4. Check if alert informing that user is blocked is visible and it contains text "Epic sadface: Sorry, this user has been locked out."

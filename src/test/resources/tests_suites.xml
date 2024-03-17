@@ -37,6 +37,12 @@
             <class name="tests.TestCase5"/>
         </classes>
     </test>
+    <test name="TestCase6">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.TestCase6"/>
+        </classes>
+    </test>
 
 
 </suite>

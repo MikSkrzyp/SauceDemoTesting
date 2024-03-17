@@ -9,7 +9,7 @@ public class TestCase1 extends TestBase{
 
     @Test
     @TmsLink("ID-1")
-    @Description("testing logging in functionality first with wrong username or password then with correct username and password")
+    @Description("testing logging in functionality first with wrong username, then with correct username and password")
     public void Test1_method(){
 
         LoginPage loginPage = new LoginPage();

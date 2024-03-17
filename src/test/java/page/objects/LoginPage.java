@@ -31,6 +31,9 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"login-button\"]")
     private WebElement login_button;
 
+    @FindBy(xpath = "//*[@id=\"login_button_container\"]/div/form/div[3]/h3")
+    private WebElement locked_out_user_alert;
+
 
     @Step("Check if the tag with text \"Swag Labs\" is visible")
     public LoginPage Check_if_the_tag_with_text_Swag_Labs_is_visible(){
@@ -48,7 +51,7 @@ public class LoginPage extends BasePage{
         assertTrue(password_input.isDisplayed());
         return this;
     }
-    @Step("Try to log in with wrong username,click login and check if the error alert is working correctly")
+    @Step("Try to log in with wrong username, click login and check if the error alert is working correctly")
     public LoginPage Try_to_log_in_with_wrong_username_clickLogin_and_check_if_the_error_is_working(){
         log().info("Try to log in with wrong username or password, click login and check if the error alert is working correctly");
         username_input.sendKeys("xyz");
@@ -71,6 +74,23 @@ public class LoginPage extends BasePage{
 
 
         return new MainPage();
+    }
+
+    @Step("Try to log in with username \"locked_out_user\" and with password \"secret_sauce\"")
+    public LoginPage Try_to_log_in_with_username_locked_out_user_and_with_password_secret_sauce(){
+        log().info("Try to log in with username \"locked_out_user\" and with password \"secret_sauce\"");
+        username_input.sendKeys("locked_out_user");
+        password_input.sendKeys("secret_sauce");
+        login_button.click();
+        return this;
+    }
+
+    @Step("Check if alert informing that user is blocked is visible and it contains text \"Epic sadface: Sorry, this user has been locked out.\"")
+    public  LoginPage Check_if_alert_informing_that_user_is_blocked_is_visible_and_it_contains_text(){
+        WaitForElement.waitUntilElementIsVisible(locked_out_user_alert);
+        assertTrue(locked_out_user_alert.isDisplayed());
+        assertEquals(locked_out_user_alert.getText(),"Epic sadface: Sorry, this user has been locked out.");
+        return this;
     }
 
 }
